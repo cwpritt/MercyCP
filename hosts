@@ -1,0 +1,6 @@
+[labservers]
+ansiblelab10
+
+[labservers:vars]
+ansible_user = cpritt
+ansible_ssh_private_key_file = /home/cpritt/.ssh/id_rsa
