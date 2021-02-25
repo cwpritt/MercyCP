@@ -33,7 +33,7 @@
     state: directory
 - name: copy index.j2 file
   template:
-    src: /ansible/roles/app-tier/templates/index.j2
+    src: /home/cpritt/ansible/roles/app-tier/templates/index.j2
     dest: /var/wwww/vhost/index.php
     mode: 0644
     owner: apache
