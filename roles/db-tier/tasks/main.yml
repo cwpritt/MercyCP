@@ -2,10 +2,10 @@
 # tasks file for roles/db-tier
 - name: Install mysql
   yum:
-  name: "{{ item }}"
-  state: latest
-loop:
-  - "{{ db_pkg }}"
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - "{{ db_pkg }}"
 - name: start mysql
   service:
     name: "{{ db_srv }}"

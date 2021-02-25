@@ -29,21 +29,21 @@
     - restart_httpd
 - name: create document root
   file:
-    path: //var/www/vhost/
+    path: /var/www/vhost/
     state: directory
-#- name: copy index.j2 file
-#  template:
-#    src: index.j2
-#    dest: /var/wwww/vhost/index.php
-#    mode: 0644
-#    owner: apache
+- name: copy index.j2 file
+  template:
+    src: index.j2
+    dest: /var/wwww/vhost/index.php
+    mode: 0644
+    owner: apache
 - name: open httpd port
   firewalld:
     service: http
     state: enabled
     immediate: true
     permanent: true
-name: enable selinux boolean
+- name: enable selinux boolean
   seboolean:
     name: "{{ item }}"
     state: yes
