@@ -29,7 +29,7 @@
     - restart_httpd
 - name: create document root
   file:
-    path: //var/www/vhost/
+    path: /var/www/vhost/
     state: directory
 - name: copy index.j2 file
   template:
@@ -43,7 +43,7 @@
     state: enabled
     immediate: true
     permanent: true
-name: enable selinux boolean
+- name: enable selinux boolean
   seboolean:
     name: "{{ item }}"
     state: yes

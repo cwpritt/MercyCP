@@ -7,7 +7,7 @@ db:
 httpd_pkg:
   - httpd
   - php
-  -php-mysql
+  - php-mysql
 httpd_srv: httpd
 db_srv: mariadb
 
